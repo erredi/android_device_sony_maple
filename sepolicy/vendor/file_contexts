@@ -1,0 +1,3 @@
+# NFC
+/dev/bd7602-i2c       u:object_r:nfc_device:s0
+/dev/cxd224x-i2c      u:object_r:nfc_device:s0
