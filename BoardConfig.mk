@@ -26,8 +26,13 @@ TARGET_BOOTLOADER_BOARD_NAME := G8141
 
 ### KERNEL
 TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-maple_defconfig
+TARGET_KERNEL_CONFIG += vendor/debugfs.config
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=maple
+
+# Point to the prebuilt kernel
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 ### PARTITIONS
 # See also /proc/partitions on the device
@@ -38,6 +43,9 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 419430400
 
 ### DISPLAY
 TARGET_SCREEN_DENSITY := 410
+
+### SEPOLICY
+BOARD_VENDOR_SEPOLICY_DIRS += device/sony/maple/sepolicy/vendor
 
 ### PROPS
 # Add device-specific ones
