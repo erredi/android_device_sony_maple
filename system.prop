@@ -18,3 +18,6 @@ ro.semc.version.fs=GENERIC
 ro.semc.version.fs_revision=47.2.A.10.107
 ro.semc.product.name=Xperia XZ Premium
 ro.semc.product.device=G81
+
+### LineageOS OTA from Github
+lineage.updater.uri=https://erredi.github.io/api/v1/{device}_{type}
